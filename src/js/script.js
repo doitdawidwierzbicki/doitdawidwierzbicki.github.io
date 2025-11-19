@@ -12,3 +12,6 @@ window.addEventListener('scroll', onScroll); onScroll();
 document.getElementById('contact-cta').addEventListener('click', () => {
   document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
 });
+
+const footer = document.getElementsByTagName('footer')[0];
+footer.innerHTML = `© ${new Date().getFullYear()} doIT Dawid Wierzbicki`;
