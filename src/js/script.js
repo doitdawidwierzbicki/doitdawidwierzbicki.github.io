@@ -13,5 +13,12 @@ document.getElementById('contact-cta').addEventListener('click', () => {
   document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
 });
 
+// Scroll down arrows
+const animatedArrows = document.querySelector('.scroll-down');
+animatedArrows.addEventListener('click', () => {
+  document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+});
+
+// Footer
 const footer = document.getElementsByTagName('footer')[0];
 footer.innerHTML = `© ${new Date().getFullYear()} doIT Dawid Wierzbicki`;
