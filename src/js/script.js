@@ -90,8 +90,8 @@
     setText('contact-copy', t.contactCopy);
     setText('contact-linkedin-label', t.contactLinkedInLabel);
     setText('footer', t.footer);
-    const toggle = document.getElementById('lang-toggle');
-    if (toggle) toggle.textContent = t.toggleLabel;
+    const toggle = document.querySelectorAll('.lang-toggle')
+    if (toggle.length) toggle.forEach((el) => { el.textContent = t.toggleLabel; });
     document.documentElement.lang = lang;
     localStorage.setItem('lang', lang);
   }
@@ -106,13 +106,15 @@
   document.addEventListener('DOMContentLoaded', function () {
     const initial = detectInitialLang();
     applyLang(initial);
-    const toggle = document.getElementById('lang-toggle');
-    if (toggle) {
-      toggle.addEventListener('click', function () {
-        const current = localStorage.getItem('lang') || initial;
-        const next = current === 'pl' ? 'en' : 'pl';
-        applyLang(next);
-      });
+    const toggle = document.querySelectorAll('.lang-toggle')
+    if (toggle.length) {
+      toggle.forEach((el) => {
+        el.addEventListener('click', function () {
+          const current = localStorage.getItem('lang') || initial;
+          const next = current === 'pl' ? 'en' : 'pl';
+          applyLang(next);
+        });
+      })
     }
   });
 })();
