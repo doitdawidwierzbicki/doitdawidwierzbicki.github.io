@@ -4,11 +4,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description"
-    content="Portfolio front-end developera — nowoczesne UI, szybkie RWD, portfolio i kontakt. Freelancer: tworzenie stron, aplikacji webowych, optymalizacja." />
+  <meta name="description" content="Portfolio front-end developera — nowoczesne UI, szybkie RWD, portfolio i kontakt. Freelancer: tworzenie stron, aplikacji webowych, optymalizacja." />
   <title>doIT Dawid Wierzbicki</title>
-  <meta name="keywords"
-    content="front-end, freelancer, web developer, JavaScript, HTML, CSS, portfolio, doit, dawid wierzbicki" />
+  <meta name="keywords" content="front-end, freelancer, web developer, JavaScript, HTML, CSS, portfolio, doit, dawid wierzbicki" />
   <link rel="icon" href="./src/img/favicon.png" type="image/png">
   <link rel="stylesheet" href="./src/css/style.css" />
 </head>
@@ -25,8 +23,9 @@
           </div>
         </div>
         <nav aria-label="Główna nawigacja">
-          <a href="#about">Usługi</a>
-          <a href="#contact">Kontakt</a>
+          <a href="#about" id="nav-about">Usługi</a>
+          <a href="#contact" id="nav-contact">Kontakt</a>
+          <button class="btn btn-ghost" id="lang-toggle" aria-label="Change language">EN</button>
         </nav>
       </div>
     </header>
@@ -35,9 +34,8 @@
       <section class="hero" aria-label="Hero">
         <div class="hero-right">
           <div class="eyebrow">doIT Dawid Wierzbicki</div>
-          <h1>Zamieniam pomysły w&nbsp;dopracowane, szybkie i&nbsp;efektowne interfejsy</h1>
-          <p class="lead">Specjalizuję się w&nbsp;tworzeniu stron, aplikacji SPA i&nbsp;systemów interaktywnych
-            stworzonych tak, by użytkownicy zostali na dłużej.</p>
+          <h1 id="hero-title">Zamieniam pomysły w&nbsp;dopracowane, szybkie i&nbsp;efektowne interfejsy</h1>
+          <p class="lead" id="hero-lead">Specjalizuję się w&nbsp;tworzeniu stron, aplikacji SPA i&nbsp;systemów interaktywnych stworzonych tak, by użytkownicy zostali na dłużej.</p>
           <div class="cta-row">
             <button class="btn" id="contact-cta">Zamów projekt</button>
           </div>
@@ -50,48 +48,48 @@
       </section>
 
       <section id="about" class="reveal">
-        <h2>Usługi</h2>
+        <h2 id="about-title">Usługi</h2>
         <div class="grid">
           <div class="card">
             <div class="about-icon">💻</div>
-            <h3>Strony WWW</h3>
-            <p class="small">
+            <h3 id="service-web-title">Strony WWW</h3>
+            <p class="small" id="service-web-copy">
               Nowoczesne, responsywne i szybkie strony WWW oraz landing page’e – zaprojektowane, by konwertować.
             </p>
           </div>
           <div class="card">
             <div class="about-icon">⚙️</div>
-            <h3>Aplikacje interaktywne</h3>
-            <p class="small">
+            <h3 id="service-apps-title">Aplikacje interaktywne</h3>
+            <p class="small" id="service-apps-copy">
               Tworzę dynamiczne SPA, PWA i komponenty front-endowe w JavaScript, Vue i React.
             </p>
           </div>
           <div class="card">
             <div class="about-icon">🚀</div>
-            <h3>Wydajność & SEO</h3>
-            <p class="small">
+            <h3 id="service-seo-title">Wydajność & SEO</h3>
+            <p class="small" id="service-seo-copy">
               Optymalizacja Core Web Vitals, audyty, poprawa szybkości działania i techniczne SEO.
             </p>
           </div>
           <div class="card">
             <div class="about-icon">🎨</div>
-            <h3>UX/UI</h3>
-            <p class="small">
+            <h3 id="service-ux-title">UX/UI</h3>
+            <p class="small" id="service-ux-copy">
               Projektuję intuicyjne interfejsy oraz angażujące animacje, które podnoszą użyteczność i wrażenia
               użytkownika.
             </p>
           </div>
           <div class="card">
             <div class="about-icon">🔧</div>
-            <h3>Wsparcie techniczne</h3>
-            <p class="small">
+            <h3 id="service-support-title">Wsparcie techniczne</h3>
+            <p class="small" id="service-support-copy">
               Rozwój istniejących projektów, naprawa błędów, aktualizacje i wdrażanie nowych funkcjonalności.
             </p>
           </div>
           <div class="card">
             <div class="about-icon">📊</div>
-            <h3>Integracje & automatyzacja</h3>
-            <p class="small">
+            <h3 id="service-integration-title">Integracje & automatyzacja</h3>
+            <p class="small" id="service-integration-copy">
               Integruję API, systemy analityczne i narzędzia marketingowe. Automatyzuję procesy, aby oszczędzać Twój
               czas.
             </p>
@@ -101,8 +99,8 @@
 
       <section id="contact" class="reveal">
         <div id="contact-wrapper">
-          <h2>Kontakt</h2>
-          <p class="contact-copy">
+          <h2 id="contact-title">Kontakt</h2>
+          <p class="contact-copy" id="contact-copy">
             Jeżeli potrzebujesz wsparcia w realizacji projektu, wyceny prac lub konsultacji technicznej — zapraszam do
             kontaktu.
             Pracuję z firmami, software house’ami oraz przedsiębiorcami, dostarczając solidne i terminowe rozwiązania
@@ -126,7 +124,7 @@
                 <rect x="2" y="9" width="4" height="12"></rect>
                 <circle cx="4" cy="4" r="2"></circle>
               </svg>
-              LinkedIn
+              <span id="contact-linkedin-label">LinkedIn</span>
             </a>
 
           </div>
@@ -134,7 +132,7 @@
       </section>
     </main>
 
-    <footer>© 2025 doIT Dawid Wierzbicki</footer>
+    <footer id="footer">© 2025 doIT Dawid Wierzbicki</footer>
   </div>
   <script src="./src/js/script.js"></script>
 </body>
