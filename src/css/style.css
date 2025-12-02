@@ -110,6 +110,7 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  position: relative;
 }
 
 .hero-right {
@@ -185,6 +186,10 @@ p.lead {
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.06);
   color: var(--text)
+}
+
+.lang-toggle-mobile {
+  display: none;
 }
 
 .scroll-down {
@@ -483,6 +488,13 @@ footer {
 
   .hero-right {
     padding: 0 15px;
+  }
+
+  .lang-toggle-mobile {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
   }
 
   h1 {
